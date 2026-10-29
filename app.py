@@ -2,10 +2,19 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-WORKBOOK = 'Health360ComprehensiveHealthcareRiskDiseaseAnalytics_17929898861220'
-TABLEAU_BASE = f'https://public.tableau.com/views/{WORKBOOK}'
-DASHBOARD_URL = f'{TABLEAU_BASE}/Dashboard1'
-STORY_URL = f'{TABLEAU_BASE}/Story1'
+# Updated Tableau Public views supplied by the project owner.
+DASHBOARD_URL = (
+    'https://public.tableau.com/views/'
+    'Health360-Healthcare-Analytics-Dashboard_17932825062180/'
+    'SmartHealthcareAnalyticsPatientRiskLifestyleInsights'
+    '?:language=en-US&:showVizHome=no'
+)
+STORY_URL = (
+    'https://public.tableau.com/views/'
+    'Health360-Healthcare-Analytics-Story_17932825385470/'
+    'SmartHealthcareAnalyticsPatientRiskLifestyleInsights'
+    '?:language=en-US&:showVizHome=no'
+)
 
 @app.route('/')
 def home():
